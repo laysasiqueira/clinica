@@ -1,4 +1,4 @@
-from projeto import db
+# from projeto import db
 
-class recepcionista(db.Model):
-    id
+# class recepcionista(db.Model):
+#     id
