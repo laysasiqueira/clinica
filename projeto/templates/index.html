@@ -3,8 +3,6 @@
 {%block titulo%}
 <title>Clinica Estrangeiros</title>
 {%endblock%}
-{%block conteudo%}
-<body>
-    <button class="column" onclick="window.location.href = 'FirstPage.html';"style ="background-color:#aaa; width=100;">Login</button>&emsp;
-</body>
-{%endblock%}
+{% block conteudo %}
+{% include 'include/navbar.html' %}
+{% endblock %}
