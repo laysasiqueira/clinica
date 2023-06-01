@@ -1,10 +1,9 @@
 {%extends "./layout/base.html"%}
 
 {%block titulo%}
-<title>Clinica Pediatrica</title>
+<title>Clinica Estrangeiros</title>
 {%endblock%}
-{%block conteudo%}
-<body>
-    <button  onclick="window.location.href = 'FirstPage.html';"style ="background-color:#aaa;"></button>&emsp;
-</body>
-{%endblock%}
+
+{% block conteudo %}
+{% include 'include/navbar.html' %}
+{% endblock %}
