@@ -5,5 +5,23 @@
 {% endblock %}
 
 {% block conteudo %}
+<body>
+    <form>
+    <label for="username">Nome de Usuário:</label>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <label>Tipo de Usuário:</label>
+    <input type="radio" id="paciente" name="userType" value="paciente">
+    <label for="paciente">Paciente</label>
+    <input type="radio" id="recepcionista" name="userType" value="recepcionista">
+    <label for="recepcionista">Recepcionista</label><br>
+
+    <input type="submit" value="Fazer Login">
+</form>
+</body>
+</html>
 
 {% endblock %}
