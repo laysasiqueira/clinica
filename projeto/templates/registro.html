@@ -1,58 +1,61 @@
 {% extends './layout/base.html'%}
 
+{% block titulo%}
+<title>Registro de Conta</title>
+{% endblock %}
 
+{%block estilo%}
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Registro de Conta</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .container h1 {
-      text-align: center;
-    }
-    .container label,
-    .container input[type="text"],
-    .container input[type="email"],
-    .container input[type="password"],
-    .container input[type="submit"] {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    .container input[type="submit"] {
-      background-color: hwb(228 16% 65%);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Registro de Conta</h1>
-    <form>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="senha">Senha:</label>
-      <input type="password" id="senha" name="senha" required>
-      
-      <input type="submit" value="Registrar">
-    </form>
-  </div>
-</body>
-</html>
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .container h1 {
+    text-align: center;
+  }
+
+  .container label,
+  .container input[type="text"],
+  .container input[type="email"],
+  .container input[type="password"],
+  .container input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .container input[type="submit"] {
+    background-color: hwb(228 16% 65%);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+</style>
+{% endblock%}
+
+{%block conteudo%}
+<div class="container mt-5">
+  <h1>Registro de Conta</h1>
+  <form class="form-control">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required class="form-control">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required class="form-control">
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required class="form-control">
+
+    <input type="submit" value="Registrar" class="form-control">
+  </form>
+</div>
+{%endblock%}
