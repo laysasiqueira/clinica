@@ -6,7 +6,14 @@
 
 {% block conteudo %}
 {% include 'include/navbar.html' %}
-<div class="text-center">
-    <h1 class="fw-bold" style="font-size: 50px;">Clinica Estrangeiros</h1>
+<!-- <div class="text-center">
+    <h1 class="fw-bold" style ="font-size: 50px;">Clinica Pediatrica</h1>
+</div> -->
+
+<div style="width: 100%;">
+    <div class="text-center">
+        <img src="{{ url_for('static', filename='media/index_image_clinica.jpg') }}" alt="imagem clinica" class="img-fluid">
+        <p class="fw-bold fs-1">Clinica Pediatrica</p>
+    </div>
 </div>
 {% endblock %}
