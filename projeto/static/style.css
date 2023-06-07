@@ -2,51 +2,51 @@
  
 .header{
     padding: 5px 120px;
-    width: 100px;
+    width: 200px;
     height: 50px;
-    background-color: #236B8E;
+    background-color: #06873c;
 }
 
 .border{
     padding: 80px 50px;
-    width: 400px;
-    height: 450px;
-    border: 1px solid #236B8E;
-    border-radius: 0px;
-    background-color: #9AC0CD;
+    width: 500px;
+    height: 550px;
+    border: 1px solid #b6e7c4;
+    border-radius: 10px;
+    background-color: #63c27e;
 }
 
 .btn {
     padding: 10px 10px;
-    background-color: #236B8E;
+    background-color: #cf9313;
     color: #FFFFFF;
-    font-style: oblique;
+    font-style: normal;
     font-weight: bold;
     border-radius: 10px;
 }
 
 .textbox{
-    padding: 10px 10px;
-    background-color: #236B8E;
-    text-decoration: #FFFFFF;
+    padding: 0.5px 0.5px;
+    background-color: #e0f0dc;
+    text-decoration: #604d4d;
     border-radius: 10px;
 }
-     
+
 ::placeholder {
-    color: #FFFFFF;
-    opacity: 0.5;
-    font-style: oblique;
+    color: #1e1c1c;
+    opacity: 0.5px;
+    font-style: normal;
     font-weight: bold;
 }
 
 .word{
     color: #FFFFFF;
-    font-style: oblique;
+    font-style: normal;
     font-weight: bold;
 }
 
 .bottom{
-    color: #236B8E;
+    color: #eef2e9;
     font-style: oblique;
     font-weight: bold;
 }
