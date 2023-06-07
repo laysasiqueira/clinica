@@ -5,57 +5,30 @@
 {% endblock %}
 
 {%block estilo%}
-<style>
-  body {
-    font-family: Arial, sans-serif;
-  }
-
-  .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  .container h1 {
-    text-align: center;
-  }
-
-  .container label,
-  .container input[type="text"],
-  .container input[type="email"],
-  .container input[type="password"],
-  .container input[type="submit"] {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .container input[type="submit"] {
-    background-color: hwb(228 16% 65%);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-</style>
-{% endblock%}
-
-{%block conteudo%}
-<div class="container mt-5">
-  <h1>Registro de Conta</h1>
-  <form class="form-control">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required class="form-control">
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required class="form-control">
-
-    <label for="senha">Senha:</label>
-    <input type="password" id="senha" name="senha" required class="form-control">
-
-    <input type="submit" value="Registrar" class="form-control">
-  </form>
-</div>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Register </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">             
+    </head>
+    <body></br></br></br></br></br>
+        <div align="center">
+          <div align="center" class="border">
+             <div class="header">
+                <h1 class="word">Register</h1>
+             </div></br></br></br>
+            <h2 class="word">
+                <form action="{{ url_for('register') }}" method="post">
+                  <div class="msg">{{ msg }}</div>
+                    <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/></br></br>
+                    <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>
+                    <input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>
+                    <input type="submit" class="btn" value="Sign Up"></br>
+                </form>
+            </h2>
+            <p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p>
+          </div>
+        </div>
+    </body>
+</html>
 {%endblock%}
