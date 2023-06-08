@@ -1,0 +1,24 @@
+{%extends "./layout/base.html"%}
+
+{%block titulo%}
+<title></title>
+{%endblock%}
+
+{% include 'include/navbar.html' %}
+{%block conteudo%}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">                    
+        <div align="center">
+          <div align="center" class="border">
+                <h1 class="bottom">
+                  Olá {{session.username}}!!</br></br> Bem-vindo🤗               
+                </h1></br></br>
+                <a href="{{ url_for('booking') }}" class="btn">Marcação</a>
+                <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+          </div>
+        </div>
+          <script>
+
+
+          </script>
+        </div>
+{%endblock%}

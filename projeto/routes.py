@@ -22,7 +22,7 @@ def login():
             session['id'] = account['id']
             session['username'] = account['username']
             msg = 'Logged in successfully !'
-            return render_template('index.html', msg = msg)
+            return render_template('bemvindo.html', msg = msg)
         else:
             msg = 'Incorrect username / password !'
     return render_template('login.html', msg = msg)
@@ -32,7 +32,14 @@ def logout():
     session.pop('loggedin', None)
     session.pop('id', None)
     session.pop('username', None)
-    return redirect(url_for('login'))
+    return redirect(url_for('index'))
+
+@app.route('/booking')
+def booking():
+    session.pop('loggedin', None)
+    session.pop('id', None)
+    session.pop('username', None)
+    return redirect(url_for('booking'))
  
 @app.route('/register', methods =['GET', 'POST'])
 def register():
