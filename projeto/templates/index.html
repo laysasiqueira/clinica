@@ -19,13 +19,17 @@
         </div><hr>
         <div align="center">
           <div align="center" class="border">
-             <div class="header">
+            <div class="header">
                 <h1 class="word"></h1>
-             </div></br></br>
-                <h1 class="bottom">
-                     Olá!!</br></br> Bem-vindo🤗                
-                </h1></br></br></br>
-                
+             </div></br></br></br></br></br>
+             <h1 class="bottom">
+                Olá!!</br></br> Bem-vindo🤗                
+           </h1></br></br></br>
+
           </div>
         </div>
+{%endblock%}
+{%block script%}
+<script src="{{url_for('static', filename='clock.js')}}"></script>
+<script src="{{url_for('static', filename='qr.js')}}"></script>
 {%endblock%}

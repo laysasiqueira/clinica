@@ -1,0 +1,19 @@
+{% extends './layout/base.html' %}
+
+{%block titulo%}
+<title></title>
+{%endblock%}
+
+{%block conteudo%}
+  <h1>Marcar Consultas</h1><hr>
+
+  <label for="date">Data:</label>
+  <input type="date" id="date" name="date">
+
+  <label for="time">Horário:</label>
+  <input type="time" id="time" name="time">
+
+  <button onclick="bookAppointment()">Consultas!</button>
+
+  <script src="marcacao.js"></script>
+  {%endblock%}

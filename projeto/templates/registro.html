@@ -20,15 +20,19 @@
             <h2 class="word">
                 <form action="{{ url_for('register') }}" method="post">
                   <div class="msg">{{ msg }}</div>
-                    <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/></br></br>
-                    <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>
-                    <input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>
+                    <input id="username" name="username" type="text" placeholder="Username" class="textbox"/></br></br>
+                    <input id="password" name="password" type="password" placeholder="Password" class="textbox"/></br></br>
+                    <input id="email" name="email" type="text" placeholder="Email ID" class="textbox"/></br></br>
                     <input type="submit" class="btn" value="Sign Up"></br>
                 </form>
             </h2>
-            <p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p>
+            <p class="bottom">Já tem conta??  <a class="bottom" href="{{url_for('login')}}"> Sign In </a></p>
           </div>
+          <img src="{{ url_for('static', filename='media/body.png') }}" alt="imagem paciente"
+          width="200"
+          height="350"
+          title="Será um prazer ajudar seu pequenino a ficar melhor!">
         </div>
-    </body>
-</html>
+       
+  
 {%endblock%}

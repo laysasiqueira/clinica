@@ -12,13 +12,11 @@
                 <h1 class="bottom">
                   Olá {{session.username}}!!</br></br> Bem-vindo🤗               
                 </h1></br></br>
-                <a href="{{ url_for('booking') }}" class="btn">Marcação</a>
+                <a href="{{ url_for('marcacao')}}" class="btn">Marcação!</a></br></br>
+                <a href="#" onclick="window.open('jogovelha');
+                window.open('jogocobra');"class="btn">Jogos</a><hr>
                 <a href="{{ url_for('logout') }}" class="btn">Logout</a>
           </div>
         </div>
-          <script>
-
-
-          </script>
         </div>
 {%endblock%}

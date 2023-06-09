@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for, send_from_directory
 from flask_mysqldb import MySQLdb
 import re
 from projeto import app, mysql
@@ -29,18 +29,25 @@ def login():
  
 @app.route('/logout')
 def logout():
-    session.pop('loggedin', None)
-    session.pop('id', None)
-    session.pop('username', None)
-    return redirect(url_for('index'))
+    return render_template('index.html')
 
-@app.route('/booking')
-def booking():
-    session.pop('loggedin', None)
-    session.pop('id', None)
-    session.pop('username', None)
-    return redirect(url_for('booking'))
+
+@app.route('/jogovelha')
+def jogovelha():
+    return render_template('jogovelha.html')
+
+@app.route('/jogocobra')
+def jogocobra():
+    return render_template('jogocobra.html')
+
+@app.route('/localizacao')
+def localizacao():
+    return render_template('localizacao.html')
  
+@app.route('/marcacao')
+def marcacao():
+    return render_template('marcacao.html')
+
 @app.route('/register', methods =['GET', 'POST'])
 def register():
     msg = ''
