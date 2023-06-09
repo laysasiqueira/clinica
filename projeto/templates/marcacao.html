@@ -1,19 +1,37 @@
 {% extends './layout/base.html' %}
 
 {%block titulo%}
-<title></title>
+<title>Marcações:</title>
 {%endblock%}
 
+
 {%block conteudo%}
-  <h1>Marcar Consultas</h1><hr>
 
-  <label for="date">Data:</label>
-  <input type="date" id="date" name="date">
+<link rel="stylesheet" href="{{ url_for('static', filename='marcacao.css') }}">  
+  <form id="appointmentForm" onsubmit="submitForm(event)">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" required>
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <br><br>
+    <label for="date">Data:</label>
+    <input type="date" id="date" required>
+    <br><br>
+    <label for="time">Horário:</label>
+    <input type="time" id="time" required>
+    <br><br>
+    <input type="submit" value="Book Appointment">
+  </form>
 
-  <label for="time">Horário:</label>
-  <input type="time" id="time" name="time">
-
-  <button onclick="bookAppointment()">Consultas!</button>
-
-  <script src="marcacao.js"></script>
+  <div id="confirmationMessage" class="hidden">
+    <h2>Appointment Booked!</h2>
+  </div>
+  {%endblock%}
+  {%block script%}
+  <script src="marcacao.js">
+    function mostrarAlerta() {
+        alert("Consulta marcada com sucesso!");
+    }
+</script>
   {%endblock%}

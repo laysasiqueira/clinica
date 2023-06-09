@@ -1,38 +1,27 @@
 {%extends "./layout/base.html"%}
-
 {%block titulo%}
-<title>Jogo de velha</title>
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='jogo.css') }}"> 
+{%endblock%}
+{%block conteudo%}
+    <main>
+        <h1>JOGO DA VELHA</h1>
+        <hr />
+        <div class="game">
+            <button data-i="1"></button>
+            <button data-i="2"></button>
+            <button data-i="3"></button>
+            <button data-i="4"></button>
+            <button data-i="5"></button>
+            <button data-i="6"></button>
+            <button data-i="7"></button>
+            <button data-i="8"></button>
+            <button data-i="9"></button>
+        </div>
+        <h2 class="currentPlayer"></h2>
+    </main>
 {%endblock%}
 
-{%block conteudo%}
-<link rel="stylesheet" href="{{ url_for('static', filename='jogo.css') }}">  
-
-    <div class="board">
-        <div class="cell" onclick="makeMove(0, 0)"></div>
-        <div class="cell" onclick="makeMove(0, 1)"></div>
-        <div class="cell" onclick="makeMove(0, 2)"></div>
-        <div class="cell" onclick="makeMove(1, 0)"></div>
-        <div class="cell" onclick="makeMove(1, 1)"></div>
-        <div class="cell" onclick="makeMove(1, 2)"></div>
-        <div class="cell" onclick="makeMove(2, 0)"></div>
-        <div class="cell" onclick="makeMove(2, 1)"></div>
-        <div class="cell" onclick="makeMove(2, 2)"></div>
-    </div>
-
-    <script>
-        let currentPlayer = "X";
-        let board = [
-            ["", "", ""],
-            ["", "", ""],
-            ["", "", ""]
-        ];
-
-        function makeMove(row, col) {
-            if (board[row][col] === "") {
-                board[row][col] = currentPlayer;
-                document.getElementsByClassName("cell")[row * 3 + col].innerText = currentPlayer;
-                currentPlayer = currentPlayer === "X" ? "O" : "X";
-            }
-        }
-    </script>
+{%block script%}
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 {%endblock%}

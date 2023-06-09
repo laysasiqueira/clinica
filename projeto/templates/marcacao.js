@@ -1,31 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const bookButton = document.getElementById('bookButton');
-  bookButton.addEventListener('click', bookAppointment);
-});
+function adicionarResultado() {
+  var resultadoInput = document.getElementById("resultado");
+  var dataInput = document.getElementById("data");
+  var horarioInput = document.getElementById("horario");
 
-// Calendar object with available slots
-const calendar = {
-  '2023-06-08': ['10:00', '11:00', '12:00'],
-  '2023-06-09': ['13:00', '14:00', '15:00'],
-  '2023-06-10': ['9:00', '10:00', '11:00']
-};
+  var resultado = resultadoInput.value;
+  var data = dataInput.value;
+  var horario = horarioInput.value;
 
-// Function to book an appointment
-function bookAppointment() {
-  const date = document.getElementById('date').value;
-  const time = document.getElementById('time').value;
+  if (resultado.trim() !== "" && data.trim() !== "" && horario.trim() !== "") {
+      var tabela = document.getElementById("tabelaResultados");
+      var corpoTabela = document.getElementById("corpoTabela");
 
-  if (calendar.hasOwnProperty(date)) {
-    const availableSlots = calendar[date];
-    if (availableSlots.includes(time)) {
-      // Remove the booked slot from the calendar
-      const index = availableSlots.indexOf(time);
-      availableSlots.splice(index, 1);
-      alert(`Appointment booked for ${date} at ${time}`);
-    } else {
-      alert(`Time slot ${time} is not available on ${date}`);
-    }
-  } else {
-    alert(`No appointments available on ${date}`);
+      var novaLinha = document.createElement("tr");
+      var novoDado = document.createElement("td");
+      novoDado.textContent = resultado;
+      novaLinha.appendChild(novoDado);
+      corpoTabela.appendChild(novaLinha);
+
+      resultadoInput.value = "";
+      dataInput.value = "";
+      horarioInput.value = "";
+
+      alert("Campos preenchidos! Consulta marcada com sucesso!");
   }
 }

@@ -22,12 +22,12 @@
                   <div class="msg">{{ msg }}</div>
                     <input id="username" name="username" type="text" placeholder="Username" class="textbox"/></br></br>
                     <input id="password" name="password" type="password" placeholder="Password" class="textbox"/></br></br>
-                    <input id="email" name="email" type="text" placeholder="Email ID" class="textbox"/></br></br>
+                    <input id="email" name="email" type="text" placeholder="Email " class="textbox"/></br></br>
                     <input type="submit" class="btn" value="Sign Up"></br>
                 </form>
             </h2>
             <p class="bottom">Já tem conta??  <a class="bottom" href="{{url_for('login')}}"> Sign In </a></p>
-          </div>
+          </div><br>
           <img src="{{ url_for('static', filename='media/body.png') }}" alt="imagem paciente"
           width="200"
           height="350"
